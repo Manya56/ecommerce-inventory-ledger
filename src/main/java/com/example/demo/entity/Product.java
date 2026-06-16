@@ -70,7 +70,10 @@ public class Product{
 
 	public Integer getStockQuantity() {
 		// TODO Auto-generated method stub
-		return null;
+		if(this.quantityChange==null) {
+			return 0;
+	}
+		return this.quantityChange;
 	}
 
 	public String getName() {
