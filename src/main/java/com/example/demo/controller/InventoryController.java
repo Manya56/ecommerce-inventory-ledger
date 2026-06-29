@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.*;
 public class InventoryController {
 
     @Autowired
-    private InventoryService inventoryService;
+    private InventoryService inventoryService; // avoid fiedl injection 
 
     // URL: http://localhost:8080/api/inventory/buy?productId=1&quantity=1
-    @PostMapping("/buy")
+    @PostMapping("/buy")  //Use constants for API paths because Spring needs fixed values when the application starts.
     public ResponseEntity<String> buyProduct(@RequestParam Long productId, @RequestParam Integer quantity) {
         try {
             inventoryService.purchaseProduct(productId, quantity);
