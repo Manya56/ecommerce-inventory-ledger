@@ -3,10 +3,20 @@ package com.example.demo.controller;
 import com.example.demo.service.InventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.*; // import everything is not a good practice 
+/*
+public final class ApiPaths {
+
+    private ApiPaths() {}
+
+    public static final String INVENTORY_API = "/api/inventory";
+}
+
+@RequestMapping(ApiPaths.INVENTORY_API)
+*/
 
 @RestController
-@RequestMapping("/api/inventory")
+@RequestMapping("/api/inventory") // use constants 
 public class InventoryController {
 
     @Autowired
