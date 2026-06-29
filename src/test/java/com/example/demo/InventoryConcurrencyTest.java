@@ -19,6 +19,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 @Transactional
 public class InventoryConcurrencyTest {
+
+
+// try to use mock object | this kind of test cases is not recomended 
+    // it cause more deley to start the application 
+    
     @Autowired
     private InventoryService inventoryService;
     @Autowired
